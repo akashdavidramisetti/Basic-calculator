@@ -1,0 +1,37 @@
+def Addition(x,y):
+    return x+y 
+def Subtraction(x,y):
+    return x-y 
+def Multiplication(x,y):
+    return x*y 
+def Division(x,y):
+    if y==0:
+        return " CANNOT DIVIDE BY ZERO!"
+    else :
+        return x / y
+print("Select operation:")
+print("1. Addition")
+print("2. Subtraction")
+print("3. Multiplication")
+print("4. Division")
+while True:
+    choice = input("ENTER CHOICE (1/2/3/4): ")
+  
+    if choice in ('1', '2', '3', '4'):
+        num1 = float(input("ENTER FIRST NUMBER: "))
+        num2 = float(input("ENTER SECOND NUMBER: "))
+
+        if choice == '1':
+            print("Result:", Addition(num1, num2))
+        elif choice == '2':
+            print("Result:", Subtraction(num1, num2))
+        elif choice == '3':
+            print("Result:", Multiplication(num1, num2))
+        elif choice == '4':
+            print("RESULT:", Division(num1, num2))
+    else:
+        print("Invalid input")
+
+    again = input(" DO YOU WANT TO PERFORM ANOTHER CALCULATION? (yes/no): ")
+    if again.lower() != 'yes':
+        break
